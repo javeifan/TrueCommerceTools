@@ -144,7 +144,7 @@ namespace MappingTools
             }
             catch (Exception)
             {
-                MessageBox.Show("Failed to find the required mailbox client!");
+                MessageBox.Show("Failed to find the required mailbox client!");//failed to find the required message in daily cases
             }
         }
         private static string StylizeLine(string str)

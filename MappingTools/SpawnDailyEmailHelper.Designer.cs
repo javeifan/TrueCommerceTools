@@ -50,7 +50,8 @@ namespace MappingTools
             this.laIssueRecordInServer = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbIssueRecordSelectAll = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbInputQA = new System.Windows.Forms.TextBox();
+            this.laQA = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -147,9 +148,9 @@ namespace MappingTools
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(17, 242);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 20);
+            this.label2.Size = new System.Drawing.Size(103, 25);
             this.label2.TabIndex = 22;
-            this.label2.Text = "Paste daily cases here: ";
+            this.label2.Text = "Daily cases";
             // 
             // tbInputMailMsg
             // 
@@ -164,7 +165,7 @@ namespace MappingTools
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 430);
+            this.label1.Location = new System.Drawing.Point(20, 608);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 20);
             this.label1.TabIndex = 25;
@@ -172,7 +173,7 @@ namespace MappingTools
             // 
             // tbMailTrailer
             // 
-            this.tbMailTrailer.Location = new System.Drawing.Point(20, 449);
+            this.tbMailTrailer.Location = new System.Drawing.Point(20, 631);
             this.tbMailTrailer.Multiline = true;
             this.tbMailTrailer.Name = "tbMailTrailer";
             this.tbMailTrailer.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -224,7 +225,7 @@ namespace MappingTools
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(190, 242);
+            this.label3.Location = new System.Drawing.Point(126, 242);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(285, 20);
             this.label3.TabIndex = 28;
@@ -241,24 +242,34 @@ namespace MappingTools
             this.cbIssueRecordSelectAll.UseVisualStyleBackColor = true;
             this.cbIssueRecordSelectAll.CheckedChanged += new System.EventHandler(this.IssueRecordSelectAll_CheckChanged);
             // 
-            // textBox1
+            // tbInputQA
             // 
-            this.textBox1.Location = new System.Drawing.Point(20, 579);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(394, 164);
-            this.textBox1.TabIndex = 30;
+            this.tbInputQA.Location = new System.Drawing.Point(20, 441);
+            this.tbInputQA.Multiline = true;
+            this.tbInputQA.Name = "tbInputQA";
+            this.tbInputQA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbInputQA.Size = new System.Drawing.Size(394, 164);
+            this.tbInputQA.TabIndex = 30;
+            // 
+            // laQA
+            // 
+            this.laQA.AutoSize = true;
+            this.laQA.Location = new System.Drawing.Point(20, 422);
+            this.laQA.Name = "laQA";
+            this.laQA.Size = new System.Drawing.Size(30, 20);
+            this.laQA.TabIndex = 31;
+            this.laQA.Text = "QA";
+            this.laQA.Click += new System.EventHandler(this.label4_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 556);
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(153, 422);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 25);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "QA";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.label4.Size = new System.Drawing.Size(330, 25);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Use \"||\" to distinguish three categories.";
             // 
             // SpawnDailyEmailHelper
             // 
@@ -266,7 +277,8 @@ namespace MappingTools
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 802);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.laQA);
+            this.Controls.Add(this.tbInputQA);
             this.Controls.Add(this.cbIssueRecordSelectAll);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.laIssueRecordInServer);
@@ -323,6 +335,7 @@ namespace MappingTools
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox cbIssueRecordSelectAll;
         private System.Windows.Forms.TextBox tbInputQA;
+        private System.Windows.Forms.Label laQA;
         private System.Windows.Forms.Label label4;
     }
 }
