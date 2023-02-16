@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScribTemplate>
+  <Header>
+    <Name>IConnect</Name>
+    <Revision>1</Revision>
+    <Specification>Scribble:v1.3</Specification>
+    <Suggestion>In the VAN Setup task, add a note "Must inform partner that customer using TrueCommerce" and mark it as completed.</Suggestion>
+  </Header>
+  <Template>iConnect (method = AS2 interconnect)[$$:BR]Inform trading partner when initiating testing that iConnect should point to TrueCommerce’s interconnect[$$:BR] [$$:BR] </Template>
+</ScribTemplate>

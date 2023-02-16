@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Update>
+  <Version>1.0.0.2_Beta</Version>
+  <BuildID></BuildID>
+  <ZipName></ZipName>
+  <MD5></MD5>
+  <FileDelList>MappingTools.exe;</FileDelList>
+  <FileCopyList>MappingTools.exe;</FileCopyList>
+  <Details></Details>
+</Update>

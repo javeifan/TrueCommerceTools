@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScribTemplate>
+  <Header>
+    <Name>SoftShare</Name>
+    <Revision>1</Revision>
+    <Specification>Scribble:v1.3</Specification>
+    <Email>support@softshare.com</Email>
+    <Subject>New Customer ID</Subject>
+    <MultiLine>False</MultiLine>
+    <Suggestion>In the VAN Setup task, add a note "Emailed Softshare" and mark it as completed.</Suggestion>
+  </Header>
+  <Template>Hello,[$$:BR][$$:BR]Please add the new customer [$:CUSTOMER_NAME] ID  [$:CUSTOMER_QUALIFIER]/ [$:CUSTOMER_EDI_ID] to TrueCommerce AS2 interconnect.[$$:BR][$$:BR]Thank you,[$$:BR]</Template>
+</ScribTemplate>

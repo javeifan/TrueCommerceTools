@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Suggestions>
+  <Type>
+    <TPNotFoundIN TypeName="TP not found in PSD.Project is at In Progress status.">[$:USER_NAME] - TP not found in PSD. Project is at In Progress status. [$:DATETIME]</TPNotFoundIN>
+    <TPNotFoundP TypeName="TP not found in PSD.Project is at Pending status.">[$:USER_NAME] - TP not found in PSD. Project is at Pending status. [$:DATETIME]</TPNotFoundP>
+    <CompanyType TypeName="Company Type is Third Party.">[$:USER_NAME] - Company Type is Third Party. [$:DATETIME]</CompanyType>
+    <TPNotSetUp TypeName="TP not set up">[$:USER_NAME] - TP not set up. [$:DATETIME]</TPNotSetUp>
+    <CustNotFound TypeName="Customer not found in PSD">[$:USER_NAME] - Customer not found in PSD. [$:DATETIME]</CustNotFound>
+    <AskingForSuppCode TypeName="Asking for supplier code">[$:USER_NAME] - Asking for supplier code. [$:DATETIME]</AskingForSuppCode>
+    <NoProjectOwner TypeName="No Project Owner">[$:USER_NAME] - No Project Owner. [$:DATETIME]</NoProjectOwner>
+    <Duplicate TypeName="Duplicate">[$:USER_NAME] - Closed as duplicates [$:DATETIME]</Duplicate>
+    <CommerceVan TypeName="CommerceVan">[$:USER_NAME] - SPS Direct AS2 [$:DATETIME]</CommerceVan>
+    <DirectAS2 TypeName="Direct AS2">[$:USER_NAME] - Direct AS2 [$:DATETIME]</DirectAS2>
+    <EDICTSYSTEMS TypeName="EDICT SYSTEMS">[$:USER_NAME] - Customer will need to inform EDICT that they are using TrueCommerce. [$:DATETIME]</EDICTSYSTEMS>
+    <FTPPartnerHosted_FTPPartnerHosted TypeName="FTP - Partner Hosted --- FTP - Partner Hosted">[$:USER_NAME] - FTP Partner Hosted - TPS Must Complete Setup [$:DATETIME]</FTPPartnerHosted_FTPPartnerHosted>
+    <FTPTCHosted_FTPTCHosted TypeName="FTP - TC Hosted --- FTP - TC Hosted">[$:USER_NAME] - FTP TC Hosted - TPS Must Complete Setup [$:DATETIME]</FTPTCHosted_FTPTCHosted>
+    <SPS TypeName="SPS">[$:USER_NAME] - Customer must submit form to SPS. [$:DATETIME]</SPS>
+    <P2P TypeName="P2P">[$:USER_NAME] - Not Needed and P2P Connection [$:DATETIME]</P2P>
+    <GCommerce TypeName="GCommerce">[$:USER_NAME] - GCommerce will complete setup [$:DATETIME]</GCommerce>
+    <Vendornet TypeName="Vendornet">[$:USER_NAME] - VendorNet Connection. Imp Specialist will work with VendorNet and customer to establish the connection. [$:DATETIME]</Vendornet>
+    <VCommerce TypeName="VCommerce">[$:USER_NAME] - Inform VCommerce to connect to TrueCommerce [$:DATETIME]</VCommerce>
+    <FTPPartnerHosted_FTPTCHosted TypeName="FTP - Partner Hosted --- FTP - TC Hosted (also called Push/Push)">[$:USER_NAME] - FTP - TPS Must Complete Setup [$:DATETIME]</FTPPartnerHosted_FTPTCHosted>
+    <DiCentral TypeName="DiCentral">[$:USER_NAME] - VAN Dicentral [$:DATETIME]</DiCentral>
+    <Promethean TypeName="Promethean">[$:USER_NAME] - FTP Partner Hosted--FTP Partner Hosted. The Trading Partner Specialists are responsible for these setups [$:DATETIME]</Promethean>
+    <Hubspan TypeName="Hubspan">[$:USER_NAME] - Customer must inform partner that they are using TrueCommerce [$:DATETIME]</Hubspan>
+    <iConnect TypeName="iConnect">[$:USER_NAME] - Must inform partner that customer using TrueCommerce [$:DATETIME]</iConnect>
+    <Transplace TypeName="Transplace">[$:USER_NAME] - Inform Transplace to connect to TrueCommerce [$:DATETIME]</Transplace>
+    <VirtualRain TypeName="Virtual Rain">[$:USER_NAME] - Virtual Rain - TPS Must Complete Setup [$:DATETIME]</VirtualRain>
+	<Coventry TypeName="Coventry">[$:USER_NAME] - Coventry. One Time team is responsible for this connection. [$:DATETIME]</Coventry>
+	<TMP_VAN TypeName="TMP_VAN">[$:USER_NAME] - VAN Dicentral [$:DATETIME]</TMP_VAN>
+	<TEC_VAN TypeName="TEC_VAN">[$:USER_NAME] - VAN Dicentral [$:DATETIME]</TEC_VAN>
+	<Logicbroker TypeName="Logicbroker">[$:USER_NAME] - Direct AS2 [$:DATETIME]</Logicbroker>
+	<Re-Implementation TypeName="Re-Implementation">[$:USER_NAME] - Closed. We shouldn’t need to resubmit for the VAN because the customer is already receiving data. [$:DATETIME]</Re-Implementation>
+  </Type>
+</Suggestions>

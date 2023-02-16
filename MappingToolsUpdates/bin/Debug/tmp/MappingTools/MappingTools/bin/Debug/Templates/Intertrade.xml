@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScribTemplate>
+  <Header>
+    <Name>Intertrade</Name>
+    <Revision>4</Revision>
+    <Specification>Scribble:v1.3</Specification>
+    <Subject>Intertrade set up</Subject>
+    <MultiLine>Falese</MultiLine>
+    <Suggestion>In the VAN Setup task, add a note "Emailed Intertrade" and mark it as completed.</Suggestion>
+  </Header>
+  <Template>Hi [$:CONSULTANT_NAME],[$$:BR][$$:BR]Could you please inform the trading partner ([$:PARTNER_NAME]) that Intertrade should point to TrueCommerce FTP interconnect (truecomm)?[$$:BR][$$:BR]Request is as below:[$$:BR][$$:BR]Hello,[$$:BR][$$:BR]Please point [$:CUSTOMER_NAME]  [$:CUSTOMER_QUALIFIER] / [$:CUSTOMER_EDI_ID] to TrueCommerce FTP interconnect (truecomm). They will be trading with [$:PARTNER_NAME] [$:PARTNER_QUALIFIER]/[$:PARTNER_EDI_ID]. Please let me know when you have this completed.[$$:BR][$$:BR]Thank you,[$$:BR][$$:BR]Or use this template if the customer is only using Intertrade for 832 transactions.[$$:BR][$$:BR]Intertrade,[$$:BR][$$:BR]Please point [$:CUSTOMER_NAME]  [$:CUSTOMER_QUALIFIER] / [$:CUSTOMER_EDI_ID] to TrueCommerce FTP interconnect (truecomm). They will be sending 832 catalogs through your VAN. Please let me know when you have this completed.[$$:BR][$$:BR]Thank you,[$$:BR][$$:BR]Project link:[$$:BR][$:PROJECT_LINK][$$:BR][$$:BR]Thanks,[$$:BR][$:USER_NAME]</Template>
+</ScribTemplate>

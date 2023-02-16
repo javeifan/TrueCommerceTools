@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Addresses>
+  <Address>
+    <Name>Amy Xu</Name>
+    <EmailAddress>Amy.Xu@truecommerce.com</EmailAddress>
+    <IfUsedInSendTo>True</IfUsedInSendTo>
+    <IfUsedInCCTo>False</IfUsedInCCTo>
+    <IfUsedInSpawnSendTo>False</IfUsedInSpawnSendTo>
+    <IfUsedInSpawnCCTo>False</IfUsedInSpawnCCTo>
+  </Address>
+  <Address>
+    <Name>Sam Shi</Name>
+    <EmailAddress>Sam.Shi@truecommerce.com</EmailAddress>
+    <IfUsedInSendTo>False</IfUsedInSendTo>
+    <IfUsedInCCTo>False</IfUsedInCCTo>
+    <IfUsedInSpawnSendTo>True</IfUsedInSpawnSendTo>
+    <IfUsedInSpawnCCTo>False</IfUsedInSpawnCCTo>
+  </Address>
+  <Address>
+    <Name>Olivia Huang</Name>
+    <EmailAddress>Olivia.Huang@truecommerce.com</EmailAddress>
+    <IfUsedInSendTo>False</IfUsedInSendTo>
+    <IfUsedInCCTo>True</IfUsedInCCTo>
+    <IfUsedInSpawnSendTo>False</IfUsedInSpawnSendTo>
+    <IfUsedInSpawnCCTo>True</IfUsedInSpawnCCTo>
+  </Address>
+  <Address>
+    <Name>Zoey Zan</Name>
+    <EmailAddress>Zoey.Zan@truecommerce.com</EmailAddress>
+    <IfUsedInSendTo>False</IfUsedInSendTo>
+    <IfUsedInCCTo>True</IfUsedInCCTo>
+    <IfUsedInSpawnSendTo>False</IfUsedInSpawnSendTo>
+    <IfUsedInSpawnCCTo>False</IfUsedInSpawnCCTo>
+  </Address>
+  <Address>
+    <Name>Cassie Xiao</Name>
+    <EmailAddress>Cassie.Xiao@truecommerce.com</EmailAddress>
+    <IfUsedInSendTo>False</IfUsedInSendTo>
+    <IfUsedInCCTo>True</IfUsedInCCTo>
+    <IfUsedInSpawnSendTo>False</IfUsedInSpawnSendTo>
+    <IfUsedInSpawnCCTo>True</IfUsedInSpawnCCTo>
+  </Address>
+  <Address>
+    <Name>Yuvia Yu</Name>
+    <EmailAddress>Yuvia.Yu@truecommerce.com</EmailAddress>
+    <IfUsedInSendTo>False</IfUsedInSendTo>
+    <IfUsedInCCTo>True</IfUsedInCCTo>
+    <IfUsedInSpawnSendTo>False</IfUsedInSpawnSendTo>
+    <IfUsedInSpawnCCTo>False</IfUsedInSpawnCCTo>
+  </Address>
+  <Address>
+    <Name>Bill Freed</Name>
+    <EmailAddress>Bill.Freed@truecommerce.com</EmailAddress>
+    <IfUsedInSendTo>False</IfUsedInSendTo>
+    <IfUsedInCCTo>False</IfUsedInCCTo>
+    <IfUsedInSpawnSendTo>False</IfUsedInSpawnSendTo>
+    <IfUsedInSpawnCCTo>False</IfUsedInSpawnCCTo>
+  </Address>
+  <Address>
+    <Name>Charlie Tracy</Name>
+    <EmailAddress>Charlie.Tracy@truecommerce.com</EmailAddress>
+    <IfUsedInSendTo>False</IfUsedInSendTo>
+    <IfUsedInCCTo>False</IfUsedInCCTo>
+    <IfUsedInSpawnSendTo>False</IfUsedInSpawnSendTo>
+    <IfUsedInSpawnCCTo>False</IfUsedInSpawnCCTo>
+  </Address>
+</Addresses>

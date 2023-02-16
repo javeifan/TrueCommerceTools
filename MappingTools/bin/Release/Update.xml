@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Update>
+  <Version>v2.0.0.3</Version>
+  <BuildID>17</BuildID>
+  <ZipName>MappingTools.v2.0.0.3.zip</ZipName>
+  <MD5></MD5>
+  <FileDelList>MappingTools.exe;MappingTools.pdb;SunnyUI.dll；SunnyUI.pdb；</FileDelList>
+  <FileCopyList>MappingTools.exe;MappingTools.pdb;SunnyUI.dll；SunnyUI.pdb；</FileCopyList>
+  <Details></Details>
+</Update>

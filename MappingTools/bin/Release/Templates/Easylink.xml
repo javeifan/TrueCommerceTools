@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScribTemplate>
+  <Header>
+    <Name>Easylink</Name>
+    <Revision>1</Revision>
+    <Specification>Scribble:v1.3</Specification>
+    <Email>irf@easylink.com</Email>
+    <Subject>TCOMNET Interconnect</Subject>
+    <MultiLine>False</MultiLine>
+    <Suggestion>In VAN Setup task, add a note "Email sent to Easylink" and mark it as completed.</Suggestion>
+  </Header>
+  <Template>Easylink Support,[$$:BR][$$:BR][$:CUSTOMER_NAME] (EDI ID: Qual=[$:CUSTOMER_QUALIFIER] ID=[$:CUSTOMER_EDI_ID]) will be exchanging EDI transactions through TrueCommerce's interconnect called TCOMNET with [$:PARTNER_NAME] (EDI ID: Qual=[$:PARTNER_QUALIFIER] ID=[$:PARTNER_EDI_ID]). Please let me know when you have this EDI relationship defined on your network.[$$:BR][$$:BR]Thank you!</Template>
+</ScribTemplate>

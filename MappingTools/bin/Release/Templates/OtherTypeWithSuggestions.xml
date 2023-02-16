@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Suggestions>
+  <Type>
+    <TPNotFound TypeName="TP not found in PSD">[$:USER_NAME] - TP not found in PSD. [$:DATETIME]</TPNotFound>
+    <TPNotSetUp TypeName="TP not set up">[$:USER_NAME] - TP not set up. [$:DATETIME]</TPNotSetUp>
+    <CustNotFound TypeName="Customer not found in PSD">[$:USER_NAME] - Customer not found in PSD. [$:DATETIME]</CustNotFound>
+    <AskingForSuppCode TypeName="Asking for supplier code">[$:USER_NAME] - Asking for supplier code. [$:DATETIME]</AskingForSuppCode>
+    <CommerceVan TypeName="CommerceVan">SPS Direct AS2</CommerceVan>
+    <DirectAS2 TypeName="Direct AS2">Direct AS2</DirectAS2>
+    <EDICTSYSTEMS TypeName="EDICT SYSTEMS">Customer will need to inform EDICT that they are using TrueCommerce.</EDICTSYSTEMS>
+    <FTPPartnerHosted_FTPPartnerHosted TypeName="FTP - Partner Hosted --- FTP - Partner Hosted">FTP Partner Hosted - TPS Must Complete Setup</FTPPartnerHosted_FTPPartnerHosted>
+    <FTPTCHosted_FTPTCHosted TypeName="FTP - TC Hosted --- FTP - TC Hosted">FTP TC Hosted - TPS Must Complete Setup</FTPTCHosted_FTPTCHosted>
+    <INOVIS TypeName="INOVIS">Customer set up with Inovis</INOVIS>
+    <SPS TypeName="SPS">Customer must submit form to SPS.</SPS>
+    <P2P TypeName="P2P">Not Needed and P2P Connection</P2P>
+    <GCommerce TypeName="GCommerce">GCommerce will complete setup</GCommerce>
+    <Vendornet TypeName="Vendornet">VendorNet Connection. Imp Specialist will work with VendorNet and customer to establish the connection.</Vendornet>
+    <VCommerce TypeName="VCommerce">Inform VCommerce to connect to TrueCommerce</VCommerce>
+    <FTPPartnerHosted_FTPTCHosted TypeName="FTP - Partner Hosted --- FTP - TC Hosted (also called Push/Push)">FTP - TPS Must Complete Setup</FTPPartnerHosted_FTPTCHosted>
+    <DiCentral TypeName="DiCentral">VAN Dicentral</DiCentral>
+    <Promethean TypeName="Promethean">FTP Partner Hosted--FTP Partner Hosted. The Trading Partner Specialists are responsible for these setups</Promethean>
+    <Hubspan TypeName="Hubspan">Customer must inform partner that they are using TrueCommerce</Hubspan>
+    <iConnect TypeName="iConnect">Must inform partner that customer using TrueCommerce</iConnect>
+    <Transplace TypeName="Transplace">Inform Transplace to connect to TrueCommerce</Transplace>
+    <VirtualRain TypeName="Virtual Rain">Virtual Rain - TPS Must Complete Setup</VirtualRain>
+	<Logicbroker TypeName="Logicbroker">Direct AS2</Logicbroker>
+  </Type>
+</Suggestions>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScribTemplate>
+  <Header>
+    <Name>CovalentWorks</Name>
+    <Revision>2</Revision>
+    <Specification>Scribble:v1.3</Specification>
+    <Email>support@covalentworks.com</Email>
+    <Subject>New Partner Setup</Subject>
+    <MultiLine>False</MultiLine>
+    <Suggestion>Emailed CovalentWorks</Suggestion>
+  </Header>
+  <Template>Hello CovalentWorks,[$$:BR][$$:BR]Could you please establish the follow IDs at ColvalentWorks?[$$:BR][$$:BR]TrueCommerce ID:[$$:BR][$:CUSTOMER_NAME]  - [$:CUSTOMER_QUALIFIER]/[$:CUSTOMER_EDI_ID][$$:BR][$$:BR][$$:BR]Parterner ID:[$$:BR][$:PARTNER_NAME] - [$:PARTNER_QUALIFIER]/[$:PARTNER_EDI_ID][$$:BR][$$:BR][$$:BR][$:CUSTOMER_NAME], is a customer of TrueCommerce, so please set up with FTP Username, Node570.[$$:BR][$$:BR]Regards,[$$:BR][$:USER_NAME]</Template>
+</ScribTemplate>

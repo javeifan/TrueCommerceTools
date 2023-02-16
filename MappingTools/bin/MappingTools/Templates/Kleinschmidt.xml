@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScribTemplate>
+  <Header>
+    <Name>Kleinschmidt</Name>
+    <Revision>1</Revision>
+    <Specification>Scribble:v1.3</Specification>
+    <Email>cs@kleinschmidt.com</Email>
+    <Subject>New Customer ID- TrueCommerce</Subject>
+    <MultiLine>False</MultiLine>
+    <Suggestion>In the VAN Setup task, add a note "Emailed Kleinschmidt" and mark it as completed.</Suggestion>
+  </Header>
+  <Template>Hello,[$$:BR][$$:BR]Please add customer’s ID to TrueCommerce AS2 connection.  [$:CUSTOMER_NAME] : [$:CUSTOMER_QUALIFIER]/[$:CUSTOMER_EDI_ID].[$$:BR][$$:BR]Thank you,[$$:BR]</Template>
+</ScribTemplate>

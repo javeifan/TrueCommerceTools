@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScribTemplate>
+  <Header>
+    <Name>GXS (Partner Relationship)</Name>
+    <Revision>2</Revision>
+    <Specification>Scribble:v1.3</Specification>
+    <Email>gold@gxs.com</Email>
+    <Subject>New Partner Relationship</Subject>
+    <MAILBOX>ADW07028</MAILBOX>
+    <MultiLine>True</MultiLine>
+    <Suggestion>In the VAN Setup task, add note "Emailed GXS" and mark it as completed.</Suggestion>
+  </Header>
+  <Template>GXS Help,[$$:BR][$$:BR]Please establish the relationship between the below TrueCommerce customer and their partner. This relationship should be established on our mailbox [$:MAILBOX].[$$:BR][$$:BR]TrueCommerce ID:[$$:BR][$:CUSTOMER_NAME] - [$:CUSTOMER_QUALIFIER]/[$:CUSTOMER_EDI_ID][$$:BR][$$:BR]Partner ID:[$$:BR][$:PARTNER_NAME] - [$:PARTNER_QUALIFIER]/[$:PARTNER_EDI_ID][$$:BR][$$:BR]Please confirm once all IDs are established.[$$:BR][$$:BR]Thank you,</Template>
+</ScribTemplate>

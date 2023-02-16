@@ -1,0 +1,15 @@
+﻿1) 模板文件请参考左侧（多个Segment需要以空行分隔）
+
+2) 以每段数据的第一行来命名Segment
+
+3) Item的命名需要遵守TypeTree的命名规则，如不能包含括号，空格等
+
+4) Item的命名暂不允许出现重复值
+
+5) 输出文件名为默认，暂不允许更改(TypeTreeMaker.mts)
+
+6) Check功能采用WTX/ITX内置ttmakr64.exe来校验
+
+7) TTMaker校验结果仅供参考
+
+8) 程序默认自动生成对应GROUP， 并按照输入顺序排列Items，暂不支持取消GROUP的创建，不需要的GROUP请于WTX/ITX中删除

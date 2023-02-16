@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E825943-CE1F-413D-809A-67A9BD81B541}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MappingTools</RootNamespace>
+    <AssemblyName>MappingTools</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MPT_ICO.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommandLine, Version=2.7.82.0, Culture=neutral, PublicKeyToken=5a870481e358d379, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommandLineParser.2.7.82\lib\net461\CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.3.1.3\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Outlook.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Outlook.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SunnyUI">
+      <HintPath>P:\111\Winform控件\WinForm控件库\SunnyUI\SunnyUI\Bin\SunnyUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.ProtectedData, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.ProtectedData.5.0.0\lib\net461\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TextInteractor, Version=1.2.7389.34135, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TextInteractor.1.2.7389.34135\lib\netstandard2.0\TextInteractor.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IntertradeSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntertradeSelection.Designer.cs">
+      <DependentUpon>IntertradeSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SharePointAuthentication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SharePointAuthentication.Designer.cs">
+      <DependentUpon>SharePointAuthentication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SharePointFileHelper.cs" />
+    <Compile Include="NewVersionFound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewVersionFound.Designer.cs">
+      <DependentUpon>NewVersionFound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetUserName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetUserName.Designer.cs">
+      <DependentUpon>SetUserName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MappingToolsCommonFuncs.cs" />
+    <Compile Include="VANConsultantDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VANConsultantDetails.Designer.cs">
+      <DependentUpon>VANConsultantDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemplatesTransFuncs.cs" />
+    <Compile Include="CreateNewMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateNewMap.Designer.cs">
+      <DependentUpon>CreateNewMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmailAddressSelections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailAddressSelections.Designer.cs">
+      <DependentUpon>EmailAddressSelections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VANEmailTemplates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VANEmailTemplates.Designer.cs">
+      <DependentUpon>VANEmailTemplates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpawnDailyEmailHelper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpawnDailyEmailHelper.Designer.cs">
+      <DependentUpon>SpawnDailyEmailHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectWTXInstallLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectWTXInstallLocation.Designer.cs">
+      <DependentUpon>SelectWTXInstallLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WTXDailyEmailHelper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WTXDailyEmailHelper.Designer.cs">
+      <DependentUpon>WTXDailyEmailHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MappingToolsFunc.cs" />
+    <Compile Include="TypeTreeMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TypeTreeMaker.Designer.cs">
+      <DependentUpon>TypeTreeMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapClone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapClone.Designer.cs">
+      <DependentUpon>MapClone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loading_MT_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loading_MT_Info.Designer.cs">
+      <DependentUpon>loading_MT_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectLocation.Designer.cs">
+      <DependentUpon>SelectLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CreateNewMap.resx">
+      <DependentUpon>CreateNewMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailAddressSelections.resx">
+      <DependentUpon>EmailAddressSelections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SharePointAuthentication.resx">
+      <DependentUpon>SharePointAuthentication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewVersionFound.resx">
+      <DependentUpon>NewVersionFound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetUserName.resx">
+      <DependentUpon>SetUserName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectWTXInstallLocation.resx">
+      <DependentUpon>SelectWTXInstallLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpawnDailyEmailHelper.resx">
+      <DependentUpon>SpawnDailyEmailHelper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeTreeMaker.resx">
+      <DependentUpon>TypeTreeMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loading_MT_Info.resx">
+      <DependentUpon>loading_MT_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapClone.resx">
+      <DependentUpon>MapClone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectLocation.resx">
+      <DependentUpon>SelectLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VANEmailTemplates.resx">
+      <DependentUpon>VANEmailTemplates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VANConsultantDetails.resx">
+      <DependentUpon>VANConsultantDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WTXDailyEmailHelper.resx">
+      <DependentUpon>WTXDailyEmailHelper.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loc_Sel_Pic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MT_Info.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+    <None Include="Resources\MainForm-left.png" />
+    <None Include="Resources\MainForm-left-button-cover.png" />
+    <None Include="Resources\MainForm-background.jpg" />
+    <None Include="Resources\MainForm-background-shadow.jpg" />
+    <None Include="Resources\MainForm-button-panel-middle.png" />
+    <None Include="Resources\MainForm-button-panel-small.png" />
+    <None Include="Resources\MainForm-logo.png" />
+    <None Include="Resources\MainForm-about-logo.png" />
+    <None Include="Resources\MT_Info-TC-logo.jpg" />
+    <None Include="Resources\Form-border-Blue.jpg" />
+    <Content Include="VANTemplateEmialFormat.html" />
+    <Content Include="MPT_ICO.ico" />
+    <Content Include="TTMakerInstruction.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\MPT_ICO.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

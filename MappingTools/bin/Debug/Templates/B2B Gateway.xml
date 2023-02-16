@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScribTemplate>
+  <Header>
+    <Name>B2B Gateway</Name>
+    <Revision>1</Revision>
+    <Specification>Scribble:v1.3</Specification>
+    <Email>Setup@B2BGateway.Net</Email>
+    <Subject>New Customer ID- TrueCommerce</Subject>
+    <MultiLine>False</MultiLine>
+    <Suggestion>In VAN Setup task, add a note "[$:USER_NAME] Emailed B2B Gateway on [$:TODAY]" and mark it as complete.</Suggestion>
+  </Header>
+  <Template>Hello,[$$:BR][$$:BR]Please add customer’s ID to TrueCommerce AS2 connection.[$$:BR][$:CUSTOMER_NAME] : [$:CUSTOMER_QUALIFIER]/[$:CUSTOMER_EDI_ID].[$$:BR][$$:BR]Thank you,[$$:BR]</Template>
+</ScribTemplate>

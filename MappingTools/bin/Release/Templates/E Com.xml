@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScribTemplate>
+  <Header>
+    <Name>E Com</Name>
+    <Revision>1</Revision>
+    <Specification>Scribble:v1.3</Specification>
+    <Email>prodmon@ecomtoday.com</Email>
+    <Subject>New Partner Setup</Subject>
+    <MultiLine>False</MultiLine>
+    <Suggestion>In VAN Setup task, add a note "Email sent to ECOM" and mark it as completed.</Suggestion>
+  </Header>
+  <Template>E Com, [$$:BR][$$:BR]Please point new customer’s ID to TrueCommerceNG.Net (AS2 name) [$$:BR][$$:BR]Customer name [$:CUSTOMER_NAME] ID [$:CUSTOMER_QUALIFIER]/ [$:CUSTOMER_EDI_ID]  AS2 name [$:CUSTOMER_EDI_ID][$:CUSTOMER_QUALIFIER][$$:BR][$$:BR]Thank you,[$$:BR]</Template>
+</ScribTemplate>

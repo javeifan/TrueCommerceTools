@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScribTemplate>
+  <Header>
+    <Name>Commport</Name>
+    <Revision>4</Revision>
+    <Specification>Scribble:v1.3</Specification>
+    <Subject>Complete the Commport Questionnaire</Subject>
+    <MultiLine>False</MultiLine>
+    <Suggestion>Send an email to the project analyst stating that the customer needs to complete the Commport Questionnaire.</Suggestion>
+  </Header>
+  <Template>Hi [$:CONSULTANT_NAME],[$$:BR][$$:BR]The customers “[$:CUSTOMER_NAME]” needs to complete the Commport Questionnaire. [$$:BR][$$:BR]For reference: the trading partner is [$:PARTNER_NAME]. [$$:BR][$$:BR]Best Regards,[$$:BR][$:USER_NAME]</Template>
+</ScribTemplate>

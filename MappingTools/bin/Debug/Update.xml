@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Update>
+  <Software Name="MappingTools">
+    <Version>v1.0.2.1</Version>
+    <ZipName>MappingTools v1.0.2.1.zip</ZipName>
+    <FileDelList>MappingTools.exe;MappingTools.pdb;</FileDelList>
+    <FileCopyList>MappingTools.exe;MappingTools.pdb;</FileCopyList>
+    <DirectoryUpdateList>Templates</DirectoryUpdateList>
+  </Software>
+</Update>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScribTemplate>
+  <Header>
+    <Name>ICC</Name>
+    <Revision>1</Revision>
+    <Specification>Scribble:v1.3</Specification>
+    <Email>vanhelp@easylink.com</Email>
+    <Subject>TRUECOMMERCE Interconnect</Subject>
+    <PushName>TRUCOM2</PushName>
+    <MultiLine>False</MultiLine>
+    <Suggestion>Noya - Emailed ICC</Suggestion>
+  </Header>
+  <Template>ICC.NET Support, [$$:BR][$$:BR][$:CUSTOMER_NAME](EDI ID: Qual=[$:CUSTOMER_QUALIFIER] ID=[$:CUSTOMER_EDI_ID]) will be exchanging EDI transactions through TrueCommerce's interconnect with [$:PARTNER_NAME](EDI ID: Qual=[$:PARTNER_QUALIFIER] ID=[$:PARTNER_EDI_ID]). Please let me know when you have this EDI relationship defined on your network. Push Name: [$:PUSH_NAME][$$:BR][$$:BR]Thank you! </Template>
+</ScribTemplate>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScribTemplate>
+  <Header>
+    <Name>GXS (New Setup)</Name>
+    <Revision>2</Revision>
+    <Specification>Scribble:v1.3</Specification>
+    <Email>gold@gxs.com</Email>
+    <Subject>New Partner Setup</Subject>
+    <MAILBOX>ADW07028</MAILBOX>
+    <MultiLine>True</MultiLine>
+    <Suggestion>Customer set up with GXS/Sterling.</Suggestion>
+  </Header>
+  <Template>GXS Help,[$$:BR][$$:BR]Please add the following EDI ID to the TrueCommerce mailbox [$:MAILBOX].[$$:BR][$$:BR]ID Needing Defined:[$$:BR][$:CUSTOMER_NAME] - [$:CUSTOMER_QUALIFIER]/[$:CUSTOMER_EDI_ID][$$:BR][$$:BR]Please confirm once all IDs are established.[$$:BR][$$:BR]Thank you,</Template>
+</ScribTemplate>

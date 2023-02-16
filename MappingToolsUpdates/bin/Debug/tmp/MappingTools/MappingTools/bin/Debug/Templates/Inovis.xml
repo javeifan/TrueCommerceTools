@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScribTemplate>
+  <Header>
+    <Name>Inovis</Name>
+    <Revision>1</Revision>
+    <Specification>Scribble:v1.3</Specification>
+    <PSN>412907439</PSN>
+    <MultiLine>False</MultiLine>
+    <Suggestion>If the customer is already set up on the True Commerce Trading Profile, add a note "Customer set up with Inovis" in the VAN Setup task and mark it as completed.</Suggestion>
+  </Header>
+  <Template>PSN: [$:PSN][$$:BR]Area: Technical Support[$$:BR]Sub-Area: Client Applications[$$:BR]Severity: Medium[$$:BR][$$:BR]Subject: Assign EDI ID [$:CUSTOMER_QUALIFIER]/[$:CUSTOMER_EDI_ID] to BizManager Party - WebMethods[$$:BR][$$:BR]Description: Please confirm this ID [$:CUSTOMER_QUALIFIER]/[$:CUSTOMER_EDI_ID] belongs to PSN: [$:PSN] and add this ID to our TrueCommerce WebMethods party on BizManager.</Template>
+</ScribTemplate>

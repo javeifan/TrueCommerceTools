@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScribTemplate>
+  <Header>
+    <Name>Loren</Name>
+    <Revision>1</Revision>
+    <Specification>Scribble:v1.3</Specification>
+    <Email>support@ecgrid.com</Email>
+    <Subject>New Partner ID</Subject>
+    <MultiLine>False</MultiLine>
+    <Suggestion>In the VAN Setup task, add a note "Emailed Loren" and mark it as completed.</Suggestion>
+  </Header>
+  <Template>Hello,[$$:BR][$$:BR]Please add customer’s ID to TrueCommerce’s FTP interconnect[$$:BR][$$:BR]Customer Name [$:CUSTOMER_NAME]  Qualifer [$:CUSTOMER_QUALIFIER] ID [$:CUSTOMER_EDI_ID][$$:BR][$$:BR]Thank you,[$$:BR]</Template>
+</ScribTemplate>

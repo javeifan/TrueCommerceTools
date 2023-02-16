@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScribTemplate>
+  <Header>
+    <Name>nuBridges</Name>
+    <Revision>2</Revision>
+    <Specification>Scribble:v1.3</Specification>
+    <Email>nupathsupport@nubridges.com</Email>
+    <Subject>New EDI ID for TrueCommerce AS2 Interconnect</Subject>
+    <MultiLine>False</MultiLine>
+    <Suggestion>In the VAN Setup task, add a note "Emailed nuBridges" and mark it as completed.</Suggestion>
+  </Header>
+  <Template>NuBridges -[$$:BR][$$:BR]Please verify that ID [$:CUSTOMER_QUALIFIER]/[$:CUSTOMER_EDI_ID] is added to TrueCommerce AS2 interconnect for [$:CUSTOMER_NAME].[$$:BR][$$:BR]If not already listed, please add. Once completed, please advise via email.[$$:BR][$$:BR]Thank You!</Template>
+</ScribTemplate>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScribTemplate>
+	<Header>
+		<Name>Intertrade</Name>
+		<Revision>4</Revision>
+		<Specification>Scribble:v1.3</Specification>
+		<Email>support@intertrade.com</Email>
+		<Subject>New Partner Relationship</Subject>
+		<MultiLine>Falese</MultiLine>
+		<Suggestion>In the VAN Setup task, add a note "Emailed Intertrade" and mark it as completed.</Suggestion>
+	</Header>
+	<Template>Hello,[$$:BR][$$:BR]Please point [$:CUSTOMER_NAME]  [$:CUSTOMER_QUALIFIER] / [$:CUSTOMER_EDI_ID] to TrueCommerce FTP interconnect (truecomm). They will be trading with [$:PARTNER_NAME] [$:PARTNER_QUALIFIER]/[$:PARTNER_EDI_ID]. Please let me know when you have this completed. [$$:BR][$$:BR]Thank you,[$$:BR][$:USER_NAME]</Template>
+	<Template832>
+		<Header>
+			<Name>Intertrade</Name>
+			<Revision>4</Revision>
+			<Specification>Scribble:v1.3</Specification>
+			<Email>support@intertrade.com</Email>
+			<Subject>New Partner Relationship</Subject>
+			<MultiLine>Falese</MultiLine>
+			<Suggestion>In the VAN Setup task, add a note "Emailed Intertrade" and mark it as completed.</Suggestion>
+		</Header>
+		<Template>Hello,[$$:BR][$$:BR]Please point [$:CUSTOMER_NAME]  [$:CUSTOMER_QUALIFIER] / [$:CUSTOMER_EDI_ID] to TrueCommerce FTP interconnect (truecomm). They will be trading 832. [$$:BR][$$:BR]Thank you,[$$:BR][$:USER_NAME]</Template>
+	</Template832>
+</ScribTemplate>

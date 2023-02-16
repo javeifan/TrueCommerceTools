@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScribTemplate>
+  <Header>
+    <Name>ICC</Name>
+    <Revision>1</Revision>
+    <Specification>Scribble:v1.3</Specification>
+    <Email>vanhelp@easylink.com</Email>
+    <Subject>TRUECOMMERCE Interconnect</Subject>
+    <PushName>TRUCOM2</PushName>
+    <MultiLine>False</MultiLine>
+    <Suggestion>As ICCNET does not take requests from anyone but their customer. Sent an email to project owner to ask the partner to setup the connection with ICCNET.</Suggestion>
+  </Header>
+  <Template>Hi,[$$:BR][$$:BR]The van type of this trading partner is ICC --- ICC, could you ask the partner to set up the connection?[$$:BR][$$:BR]Thanks,[$$:BR][$:USER_NAME]</Template>
+</ScribTemplate>

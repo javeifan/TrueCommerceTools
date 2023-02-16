@@ -1,0 +1,6 @@
+*************This file record what updated**************
+
+2023/2/9 Gordon Fan
+	1.added a pop-up to enter in consultant name for sending to or CC in Van Email Template.
+	2.removed two redundant input box of this pop-up mentioned above
+	3.added two new variables in template :  [$:USER_NAME] indicates your name  [$TODAY] indicates the date of today

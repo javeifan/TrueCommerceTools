@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScribTemplate>
+  <Header>
+    <Name>HP MHT</Name>
+    <Revision>1</Revision>
+    <Specification>Scribble:v1.3</Specification>
+    <Email>besoperations@dxc.com</Email>
+    <Subject>Establish the relationship</Subject>
+    <MultiLine>True</MultiLine>
+    <Suggestion>In the VAN Setup task, add a note "Emailed HP MHT" and mark it as completed.</Suggestion>
+  </Header>
+  <Template>Hello HP MHT/EDS Elit,[$$:BR][$$:BR]I hope you’re having a wonderful day! Your help would be greatly appreciated. Can you establish the relationship below with ([$:CUSTOMER_NAME])and ([$:PARTNER_NAME]) ? ([$:CUSTOMER_NAME])  is customer of True Commerce and they need to be set up with their trading partner ([$:PARTNER_NAME]) to trade EDI documents.[$$:BR][$$:BR]TC Customer: [$:CUSTOMER_NAME][$$:BR][$:CUSTOMER_QUALIFIER]/ [$:CUSTOMER_EDI_ID][$$:BR][$$:BR]Trading Partner: [$:PARTNER_NAME][$$:BR][$:PARTNER_QUALIFIER]/ [$:PARTNER_EDI_ID][$$:BR]Once completed, please advise. I appreciate your future help! Have a great day![$$:BR][$$:BR]</Template>
+</ScribTemplate>
