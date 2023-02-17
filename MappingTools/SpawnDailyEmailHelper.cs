@@ -123,7 +123,9 @@ namespace MappingTools
                 string content = "<style>p{ margin:0 auto;font-family:\"Calibri\",sans-serif;font-size:11.0pt;color:black}</style>";
                 content += StylizeLine("Hi " + tbSayHi.Text + ",");
                 content += emptyLine;
-                string processedValue = MessagePreprocess(issueRecord + "\r\n" + tbInputMailMsg.Text);
+
+                #region preprocess text in tbInputMailMsg(daily cases)
+                string processedValue = MessagePreprocess(issueRecord + "\r\n" + tbInputMailMsg.Text,"daily");
                 content += processedValue;
                 content += emptyLine;
                 string[] msgTrailerArray = Regex.Split(tbMailTrailer.Text, "\r\n", RegexOptions.IgnoreCase);
@@ -134,6 +136,13 @@ namespace MappingTools
                     else
                         content += StylizeLine(eachTrailerLine);
                 }
+                #endregion
+
+                #region preprocess text in tbInputQA 
+                string processValueQA = MessagePreprocess(tbInputQA.Text,"QA");//gfan 23/02/17
+                content += processValueQA;
+                content += emptyLine;//gfan 23/02/17
+                #endregion
 
                 mailItem.HTMLBody = content;
                 mailItem.Display();
@@ -157,77 +166,136 @@ namespace MappingTools
             string stylizeCaseLine = "<p class=\"MsoListParagraph\" style=\"margin-left:45.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2\"><!--[if !supportLists]--><span style=\"font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black\"><span style=\"mso-list:Ignore\">·<span style=\"font:11.0pt &quot;Calibri&quot;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><!--[endif]--><span style=\"color:black\">Case # " + str + "<o:p></o:p></span></p>";
             return stylizeCaseLine;
         }
-        private static string MessagePreprocess(string inputValue)
+        private static string StylizeDuplicateQALine(string str)//gfan 23/02/17 
+        {
+            //turn the case to red to show it's duplicate
+            string stylizeCaseLine = "<p class=\"MsoListParagraph\" style=\"margin-left:45.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2\"><span style=\"font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:red\"><span style=\"mso-list:Ignore\">·<span style=\"font:11.0pt &quot;Calibri&quot;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><!--[endif]--><span style=\"color:black\">Case # " + str + "<o:p></o:p></span></p>";
+            return stylizeCaseLine;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="inputValue"></param>
+        /// <param name="messageType">"daily" or "QA"</param>
+        /// <returns></returns>
+        private static string MessagePreprocess(string inputValue, string messageType)
         {
             string finalOut = "";
             string dailyIssueRecord = "";
             string emptyLine = "<p><span style=\"color:black\"><o:p>&nbsp;</o:p></span></p>";
             if (inputValue.EndsWith("\r\n"))
                 inputValue.Remove(inputValue.LastIndexOf("\r\n"), 1);
-            try
+            if (messageType == "daily")//gfan process daily cases and QA separately
             {
-                //string[] casesArray = Regex.Split(inputValue,"\r\n", RegexOptions.IgnoreCase);
-                string[] casesArray = inputValue.Split("\r\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                for (int i = 0; i < casesArray.Length; i++)
+                try
                 {
-                    if (casesArray[i].StartsWith("["))
+                    //string[] casesArray = Regex.Split(inputValue,"\r\n", RegexOptions.IgnoreCase);
+                    string[] casesArray = inputValue.Split("\r\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                    for (int i = 0; i < casesArray.Length; i++)
                     {
-                        finalOut += StylizeLine("Issue:");
-                        break;
+                        if (casesArray[i].StartsWith("["))
+                        {
+                            finalOut += StylizeLine("Issue:");
+                            break;
+                        }
+
+                    }
+                    foreach (string eachCase in casesArray)
+                    {
+                        if (eachCase.StartsWith("[") && eachCase.Contains("||") == false)
+                        {
+                            finalOut += StylizeCaseLine(RemovePrefix(eachCase).Trim());
+                            dailyIssueRecord += eachCase.Trim() + "\r\n";
+                        }
+                        else if (eachCase.StartsWith("[") && eachCase.Contains("||") == true)
+                        {
+                            string _Issue = eachCase.Split("||".ToCharArray(), StringSplitOptions.RemoveEmptyEntries)[0];
+                            string _Reason = eachCase.Split("||".ToCharArray(), StringSplitOptions.RemoveEmptyEntries)[1];
+                            finalOut += StylizeCaseLine(RemovePrefix(_Issue).Trim());
+                            dailyIssueRecord += eachCase.Trim() + "\r\n";
+                            finalOut += "<p class=\"MsoListParagraph\" style=\"margin-left:45.0pt\"><span style=\"color:red\">" + _Reason + "</span><span style=\"font-family:DengXian;color:red;mso-fareast-language:ZH-CN\"><o:p></o:p></span></p>";
+                        }
                     }
 
+                    ClearSpawnIssueCasesRecord("./SpawnDailyIssueCasesRecord.txt");
+                    WriteSpawnIssueCasesRecord("./SpawnDailyIssueCasesRecord.txt", dailyIssueRecord.Trim());
+                    //UpdateUtilityForSpawnIssuesRecord.UploadIssuesRecord(dailyIssueRecord.Trim());
+                    ClearSpawnIssueCasesRecord("./SpawnDailyIssueCasesRecord.txt");
+
+                    for (int i = 0; i < casesArray.Length; i++)
+                    {
+                        if (casesArray[i].StartsWith("["))
+                        {
+                            finalOut += emptyLine;
+                            break;
+                        }
+
+                    }
+                    for (int i = 0; i < casesArray.Length; i++)
+                    {
+                        if (IfStartsWithNum(casesArray[i].Substring(0, 9)))
+                        {
+                            //finalOut += emptyLine;
+                            finalOut += StylizeLine("Deployment succeeded/Cases closed:");
+                            break;
+                        }
+
+                    }
+                    foreach (string eachCase in casesArray)
+                    {
+                        if (IfStartsWithNum(eachCase.Substring(0, 9)))
+                            finalOut += StylizeCaseLine(eachCase.Trim());
+                    }
                 }
-                foreach (string eachCase in casesArray)
+                catch (Exception)
                 {
-                    if (eachCase.StartsWith("[") && eachCase.Contains("||") == false)
-                    {
-                        finalOut += StylizeCaseLine(RemovePrefix(eachCase).Trim());
-                        dailyIssueRecord += eachCase.Trim() + "\r\n";
-                    }
-                    else if (eachCase.StartsWith("[") && eachCase.Contains("||") == true)
-                    {
-                        string _Issue = eachCase.Split("||".ToCharArray(), StringSplitOptions.RemoveEmptyEntries)[0];
-                        string _Reason = eachCase.Split("||".ToCharArray(), StringSplitOptions.RemoveEmptyEntries)[1];
-                        finalOut += StylizeCaseLine(RemovePrefix(_Issue).Trim());
-                        dailyIssueRecord += eachCase.Trim() + "\r\n";
-                        finalOut += "<p class=\"MsoListParagraph\" style=\"margin-left:45.0pt\"><span style=\"color:red\">" + _Reason + "</span><span style=\"font-family:DengXian;color:red;mso-fareast-language:ZH-CN\"><o:p></o:p></span></p>";
-                    }
-                }
-
-                ClearSpawnIssueCasesRecord("./SpawnDailyIssueCasesRecord.txt");
-                WriteSpawnIssueCasesRecord("./SpawnDailyIssueCasesRecord.txt", dailyIssueRecord.Trim());
-                //UpdateUtilityForSpawnIssuesRecord.UploadIssuesRecord(dailyIssueRecord.Trim());
-                ClearSpawnIssueCasesRecord("./SpawnDailyIssueCasesRecord.txt");
-
-                for (int i = 0; i < casesArray.Length; i++)
-                {
-                    if (casesArray[i].StartsWith("["))
-                    {
-                        finalOut += emptyLine;
-                        break;
-                    }
-
-                }
-                for (int i = 0; i < casesArray.Length; i++)
-                {
-                    if (IfStartsWithNum(casesArray[i].Substring(0, 9)))
-                    {
-                        //finalOut += emptyLine;
-                        finalOut += StylizeLine("Deployment succeeded/Cases closed:");
-                        break;
-                    }
-
-                }
-                foreach (string eachCase in casesArray)
-                {
-                    if (IfStartsWithNum(eachCase.Substring(0, 9)))
-                        finalOut += StylizeCaseLine(eachCase.Trim());
+                    MessageBox.Show("Daily Cases Input Message Error!");
                 }
             }
-            catch (Exception)
+            else if (messageType == "QA")//gfan added QA process 23/02/17
             {
-                MessageBox.Show("Input Message Error!");
+                try
+                {
+                    string[] QAArray = inputValue.Split("\r\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                    int countLines = 0;//three categories of QA is split by "||"
+                    finalOut += StylizeLine("QA failed:");
+                    HashSet<string> caseSet = new HashSet<string>();
+                    foreach (string eachLine in QAArray)
+                    {
+                        if (eachLine.StartsWith("||"))
+                        {
+                            countLines++;
+                            if (countLines == 1)
+                            {
+                                finalOut += StylizeLine("QA In Testing");
+                                finalOut += emptyLine;
+                            }else if (countLines == 2)
+                            {
+                                finalOut += StylizeLine("QA Not Started:");
+                                finalOut += emptyLine;
+                            }
+                        }
+                        else
+                        {
+                            Regex regNum = new Regex("^[0-9]*");
+                            string caseID = regNum.Match(eachLine).Value;
+                            if (!caseSet.Contains(caseID))
+                            {
+                                finalOut += StylizeDuplicateQALine(eachLine);
+                            }
+                            else
+                            {
+                                caseSet.Add(caseID);
+                                finalOut += StylizeCaseLine(eachLine);
+                            }
+                        }
+                    }
+                }
+                catch { MessageBox.Show("QA Input Message Error"); }
+
             }
+
 
             return finalOut;
         }
@@ -458,6 +526,11 @@ namespace MappingTools
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }

@@ -53,6 +53,8 @@ namespace MappingTools
             this.tbInputQA = new System.Windows.Forms.TextBox();
             this.laQA = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // laSayHiTo
@@ -148,7 +150,7 @@ namespace MappingTools
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(17, 242);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 25);
+            this.label2.Size = new System.Drawing.Size(82, 20);
             this.label2.TabIndex = 22;
             this.label2.Text = "Daily cases";
             // 
@@ -225,7 +227,7 @@ namespace MappingTools
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(126, 242);
+            this.label3.Location = new System.Drawing.Point(24, 398);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(285, 20);
             this.label3.TabIndex = 28;
@@ -244,7 +246,7 @@ namespace MappingTools
             // 
             // tbInputQA
             // 
-            this.tbInputQA.Location = new System.Drawing.Point(20, 441);
+            this.tbInputQA.Location = new System.Drawing.Point(21, 446);
             this.tbInputQA.Multiline = true;
             this.tbInputQA.Name = "tbInputQA";
             this.tbInputQA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -265,17 +267,39 @@ namespace MappingTools
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(153, 422);
+            this.label4.Location = new System.Drawing.Point(193, 585);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(330, 25);
+            this.label4.Size = new System.Drawing.Size(264, 20);
             this.label4.TabIndex = 32;
             this.label4.Text = "Use \"||\" to distinguish three categories.";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(24, 585);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 25);
+            this.label5.TabIndex = 33;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(24, 585);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(264, 25);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "duplicate cases would turn red";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // SpawnDailyEmailHelper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 802);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.laQA);
             this.Controls.Add(this.tbInputQA);
@@ -337,5 +361,7 @@ namespace MappingTools
         private System.Windows.Forms.TextBox tbInputQA;
         private System.Windows.Forms.Label laQA;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
